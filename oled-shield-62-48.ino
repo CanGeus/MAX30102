@@ -128,6 +128,12 @@ void heartRate(){
     }
   }
 
+display.setTextSize(1);
+    display.setTextColor(WHITE);
+    display.setCursor(0,0);
+    display.print("BPM= ");
+    display.println(beatsPerMinute);
+    
   if (irValue < 50000){
     display.setTextSize(1);
     display.setTextColor(WHITE);
@@ -136,11 +142,7 @@ void heartRate(){
     // display.clearDisplay();
     // Serial.print(" No finger");
   }else {
-    display.setTextSize(1);
-    display.setTextColor(WHITE);
-    display.setCursor(0,0);
-    display.print("BPM= ");
-    display.println(beatsPerMinute);
+    
     // Serial.print("IR=");
     // Serial.print(irValue);
     // Serial.print(", BPM=");
